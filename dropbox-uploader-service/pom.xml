@@ -70,7 +70,6 @@
     <build>
         <plugins>
 
-            <!--source level should be 1.6 (which is not Maven default) for java EE 6 projects, so let's change it -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -85,6 +84,15 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <port>8080</port>
+                    <path>/</path>
                 </configuration>
             </plugin>
 

@@ -18,14 +18,17 @@ You should create a new Application in [Dropbox App Console] and update the appl
 
 Installation
 --------------
-
-Update App Properties file with your Application Details.
-
+* Clone this project
 ```sh
 git clone https://github.com/adaofeliz/dropbox-uploader.git dropbox-uploader
+```
+
+* Update App Properties file with your Application Details.
+
+```sh
 vi dropbox-uploader/dropbox-uploader-service/src/main/resources/application.properties
 ```
-Start Up the Application
+* Start Up the Application
 ```sh
 cd dropbox-uploader
 mvn clean install

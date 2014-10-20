@@ -1,6 +1,7 @@
 package com.adaofeliz.dropboxuploader;
 
 import com.adaofeliz.dropboxuploader.config.AppConfig;
+import com.adaofeliz.dropboxuploader.config.SwaggerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.WebApplicationInitializer;
@@ -18,6 +19,8 @@ public class AppInitializer implements WebApplicationInitializer {
 
     private static final Logger LOG = LoggerFactory.getLogger(AppInitializer.class);
 
+    private static final String CONFIG_LOCATION = "com.adaofeliz.dropboxuploader.config";
+
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
 
@@ -25,7 +28,7 @@ public class AppInitializer implements WebApplicationInitializer {
 
         // Create ApplicationContext
         AnnotationConfigWebApplicationContext applicationContext = new AnnotationConfigWebApplicationContext();
-        applicationContext.register(AppConfig.class);
+        applicationContext.setConfigLocation(CONFIG_LOCATION);
 
         // Add the servlet mapping manually and make it initialize automatically
         DispatcherServlet dispatcherServlet = new DispatcherServlet(applicationContext);

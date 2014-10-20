@@ -39,13 +39,10 @@ mvn tomcat7:run
 Try it
 --------------
 Now open your browser: http://localhost:8080/
-
-![alt text](https://photos-6.dropbox.com/t/1/AAB2wCY5uaKCgNqkox812fTM3MZLaAOkUb93x0W_uJhutg/12/32917797/png/1024x768/3/1413831600/0/2/Screenshot%202014-10-20%2018.49.05.png/nneAP3cnfzqeSA3lBoPuud2XCF77lAO7AowbDv_EeQo)
-
 You should allow your dropbox access using: http://localhost:8080/dropbox/allow
-
 Your access token will be stored in your browser session cookies.
 
+![alt text](https://photos-6.dropbox.com/t/1/AAB2wCY5uaKCgNqkox812fTM3MZLaAOkUb93x0W_uJhutg/12/32917797/png/1024x768/3/1413831600/0/2/Screenshot%202014-10-20%2018.49.05.png/nneAP3cnfzqeSA3lBoPuud2XCF77lAO7AowbDv_EeQo)
 
 License
 ----

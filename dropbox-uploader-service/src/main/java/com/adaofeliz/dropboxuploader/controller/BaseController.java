@@ -18,12 +18,9 @@ import java.io.IOException;
 @RequestMapping("/*")
 public class BaseController {
 
-    @Value("${app.base.url}")
-    private String appBaseURL;
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.TEMPORARY_REDIRECT)
-    public void baseUrl(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
+    public void baseUrl(HttpServletResponse httpServletResponse)
             throws IOException {
 
         // Just Redirecting to the Web Interface

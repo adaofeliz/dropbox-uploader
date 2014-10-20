@@ -25,15 +25,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/index.html").addResourceLocations("/index.html");
-        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
-    }
-
-    @Bean
-    public MultipartResolver multipartResolver() {
-        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
-        multipartResolver.setMaxUploadSize(5 * 1024 * 1024);
-        return multipartResolver;
+        registry.addResourceHandler("/web/**").addResourceLocations("/web/");
     }
 
     // General Application Beans
@@ -49,6 +41,13 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         propertyPlaceholderConfigurer.setProperties(propertiesFactoryBean.getObject());
 
         return propertyPlaceholderConfigurer;
+    }
+
+    @Bean
+    public MultipartResolver multipartResolver() {
+        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+        multipartResolver.setMaxUploadSize(5 * 1024 * 1024);
+        return multipartResolver;
     }
 
 }

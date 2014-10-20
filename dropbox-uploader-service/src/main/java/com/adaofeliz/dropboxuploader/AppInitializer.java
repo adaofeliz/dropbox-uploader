@@ -1,7 +1,5 @@
 package com.adaofeliz.dropboxuploader;
 
-import com.adaofeliz.dropboxuploader.config.AppConfig;
-import com.adaofeliz.dropboxuploader.config.SwaggerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.WebApplicationInitializer;

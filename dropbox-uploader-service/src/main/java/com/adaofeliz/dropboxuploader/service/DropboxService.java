@@ -39,8 +39,12 @@ public class DropboxService {
     @Value("${dropbox.app.sessionstore.key}")
     private String sessionStoreKey;
 
+    @Value("${app.name}")
+    private String appName;
+
     @Value("${app.base.url}")
     private String appBaseURL;
+
 
     public void uploadFile(MultipartFile file, HttpSession session) throws Exception {
 
@@ -54,7 +58,7 @@ public class DropboxService {
 
             DbxSessionStore dbxSessionStore = new DbxStandardSessionStore(session, sessionStoreKey);
 
-            DbxRequestConfig config = new DbxRequestConfig("SaCO", Locale.getDefault().toString());
+            DbxRequestConfig config = new DbxRequestConfig(appName, Locale.getDefault().toString());
             DbxClient client = new DbxClient(config, dbxSessionStore.get());
 
             InputStream inputStream = file.getInputStream();
@@ -107,7 +111,7 @@ public class DropboxService {
     private DbxWebAuth createDbxWebAuth(HttpSession session) {
         // Application Information
         DbxAppInfo appInfo = new DbxAppInfo(appKey, appSecret);
-        DbxRequestConfig config = new DbxRequestConfig("SaCO/1.0", Locale.getDefault().toString());
+        DbxRequestConfig config = new DbxRequestConfig(appName, Locale.getDefault().toString());
 
         // Request Information
         DbxSessionStore dbxSessionStore = new DbxStandardSessionStore(session, sessionStoreKey);

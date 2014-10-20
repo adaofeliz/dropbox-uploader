@@ -1,4 +1,4 @@
-Dropbox Uploader
+Dropbox Uploader - [![Build Status](https://travis-ci.org/adaofeliz/dropbox-uploader.png)](https://travis-ci.org/adaofeliz/dropbox-uploader)
 =========
 
 Dropbox Uploader is simple rest service to upload files into dropbox.

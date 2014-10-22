@@ -32,7 +32,7 @@
 
         <!-- Utils-->
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
-        <commons-io.version>1.3.2</commons-io.version>
+        <commons-io.version>2.4</commons-io.version>
         <dropbox-sdk.version>[1.7,1.8)</dropbox-sdk.version>
 
         <!-- Logging -->
@@ -94,10 +94,11 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.commons</groupId>
+                <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
+
 
             <dependency>
                 <groupId>com.dropbox.core</groupId>

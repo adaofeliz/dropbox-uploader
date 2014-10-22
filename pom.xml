@@ -39,7 +39,9 @@
         <slf4j.version>1.7.7</slf4j.version>
         <logback.version>1.1.2</logback.version>
 
-        <!-- Deploying -->
+        <!-- Build Plugins -->
+        <maven-compiler.version>3.2</maven-compiler.version>
+        <maven-war.version>2.5</maven-war.version>
         <tomcat.version>2.2</tomcat.version>
 
     </properties>
@@ -115,14 +117,34 @@
                 <version>${logback.version}</version>
             </dependency>
 
-            <!-- Deploy -->
-            <dependency>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>${tomcat.version}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
+
+    <!-- Build Plugins -->
+    <build>
+        <pluginManagement>
+            <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven-war.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>${tomcat.version}</version>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>

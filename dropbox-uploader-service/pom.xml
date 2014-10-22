@@ -39,7 +39,6 @@
         <dependency>
             <groupId>com.mangofactory</groupId>
             <artifactId>swagger-springmvc</artifactId>
-            <version>${swagger.version}</version>
         </dependency>
 
         <dependency>
